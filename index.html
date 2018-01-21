@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SimpleLogin</title>
+
+    <script src="js/jquery.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+            integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+            crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-5 mt-2">
+        <form action="www.google.com" onsubmit=" return validateForm()" method="post" >
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control  " id="name"  placeholder="Enter name" onchange="validateName()">
+            <div class="hidden invalid-feedback " id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="surName">Surname</label>
+                <input type="text" class="form-control" id="surName"  placeholder="Enter surname" onchange="validateSurName()">
+                <div class="hidden invalid-feedback " id="surNameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" min="18" class="form-control" id="age"  placeholder="Enter age" onchange="validateAge()">
+                <div class="hidden invalid-feedback " id="ageError"></div>
+
+            </div>
+
+            <button type="submit" class="btn btn-success offset-10">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+</body>
+<script src="js/app.js" defer></script>
+</html>
