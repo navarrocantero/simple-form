@@ -1,9 +1,9 @@
 let name = "name";
 let surName = "surName";
 let age = "age";
-let nameControl;
-let surNameControl;
-let ageControl;
+let nameControl = false;
+let surNameControl = false;
+let ageControl = false;
 let equal = "=";
 let plus = "+";
 let and = "&";
@@ -95,7 +95,7 @@ function validateSurName() {
                 if (Object.keys(data).length > 0) {
                     $("#surName").removeClass("is-valid");
                     $("#surName").addClass("is-invalid");
-                    surNameControl =  false;
+                    surNameControl = false;
                 } else {
                     $("#surName").removeClass("is-invalid");
                     $("#surName").addClass("is-valid")
@@ -143,11 +143,7 @@ function validateAge() {
 }
 
 function validateForm() {
- if( nameControl || surNameControl || ageControl){
-     return true
- }else{return false}
-
-
+    return (nameControl && ageControl && surNameControl);
 
 
 }
