@@ -9,7 +9,7 @@ let plus = "+";
 let and = "&";
 let post = "POST";
 let web = "server/validation.php?";
-
+//TCEP
 function objetoXHR() {
     if (window.XMLHttpRequest) {// El navegador implementa la interfaz XHR de forma nativa
         return new XMLHttpRequest();
